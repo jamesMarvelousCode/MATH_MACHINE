@@ -1,0 +1,27 @@
+using System;
+
+namespace Factorial_of_a_Number
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number please");
+            int mynumbertobemathed = Convert.ToInt16(Console.ReadLine());
+            Factorial(mynumbertobemathed);
+            Console.ReadKey();
+        }
+
+        public static void Factorial(int mynumberformaths)
+        {
+            int result = mynumberformaths;
+
+            for (int i = 1; i < mynumberformaths; i++)
+            {
+                result = result * i;
+            }
+
+            Console.WriteLine(result);
+        }
+    }
+}

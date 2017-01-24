@@ -1,0 +1,29 @@
+using System;
+
+namespace Console_Fibonacci_Sequence
+{
+    class Program
+    {
+        public static int PRINT_LIMIT = 15;
+        public static int COUNTER_START = 0;
+        public static int FIBONACCI_FIGURE_ONE = 0;
+        public static int FIBONACCI_FIGURE_TWO = 1;
+
+        static void Main(string[] args)
+        {
+            Fibonacci(FIBONACCI_FIGURE_ONE, FIBONACCI_FIGURE_TWO, COUNTER_START);
+        }
+
+        public static void Fibonacci(int a, int b, int counter)
+        {
+            Console.WriteLine(a);
+            if (counter < PRINT_LIMIT)
+            {
+                Fibonacci(b, a + b, counter+1);
+            }
+            Console.ReadKey();
+            Environment.Exit(0);
+        }
+
+    }
+}
